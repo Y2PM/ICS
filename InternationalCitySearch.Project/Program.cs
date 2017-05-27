@@ -31,7 +31,7 @@ namespace InternationalCitySearch.Project
             GetCitiesClass GetCitiesObject = new GetCitiesClass();
             List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//Cities.txt");
             SearchClass SearchClassObject = new SearchClass(CitiesList);
-            var returnobj = SearchClassObject.Search("BanG");
+            var returnobj = SearchClassObject.Search("la");
 
             List<string> Cities = new List<string>(returnobj.NextCities);
             List<string> Letters = new List<string>(returnobj.NextLetters);
