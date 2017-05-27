@@ -13,9 +13,11 @@ namespace InternationalCitySearch.Project
         {
             //"C://Users//Joe//Source//Repos//ICS//Cities.txt"
             //"H://axa project//InternationalCitySearch//Cities.txt"
+            //149893ChineseCityNames.txt
+            //Cities.txt
 
             GetCitiesClass GetCitiesObject = new GetCitiesClass();
-            List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//Cities.txt");
+            List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//ChineseCityNames.txt");
             SearchClass SearchClassObject = new SearchClass(CitiesList);
             var returnobj = SearchClassObject.Search("la");
 
