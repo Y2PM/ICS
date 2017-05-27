@@ -19,21 +19,34 @@ namespace InternationalCitySearch.Project
             GetCitiesClass GetCitiesObject = new GetCitiesClass();
             List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//149893ChineseCityNames.txt");
             SearchClass SearchClassObject = new SearchClass(CitiesList);
-            var returnobj = SearchClassObject.Search("la");
+            string searchTearm = "";
+            string continueQ = "Y";
 
-            List<string> Cities = new List<string>(returnobj.NextCities);
-            List<string> Letters = new List<string>(returnobj.NextLetters);
-
-            foreach (var City in Cities)
+            while (continueQ.ToUpper()=="Y"|| continueQ.ToUpper() == "YES")
             {
-                Console.WriteLine(City.ToString());
-            }
-            foreach (var Letter in Letters)
-            {
-                Console.WriteLine(Letter.ToString());
+                Console.WriteLine("Please enter search term: ");
+                searchTearm = Console.ReadLine();
+
+                var returnobj = SearchClassObject.Search(searchTearm);
+
+                List<string> Cities = new List<string>(returnobj.NextCities);
+                List<string> Letters = new List<string>(returnobj.NextLetters);
+
+                Console.WriteLine("Matching cities: ");
+                foreach (var City in Cities)
+                {
+                    Console.WriteLine(City.ToString());
+                }
+
+                Console.WriteLine("Possible next characters: ");
+                foreach (var Letter in Letters)
+                {
+                    Console.WriteLine(Letter.ToString());
+                }
+                Console.WriteLine("Continue searching? Yes or no ");
+                continueQ = Console.ReadLine();
             }
 
-            Console.ReadLine();
         }
     }
 }

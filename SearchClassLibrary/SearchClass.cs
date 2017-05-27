@@ -42,12 +42,14 @@ namespace SearchClassLibrary
                 //           charicter match check                                     array length check
                 if ((arrayToStringToCommpare.ToUpper() == searchString.ToUpper() && (chararray.Length >= searchString.Length)))
                 {
-                    string NextChar = City.Substring(searchStringLength, 1);
                     ListcitiesResults.Add(City);
-                    //                                                               avoiding duplicates
-                    if ((chararray.Length > searchString.Length) && (ReturnObject.NextLetters.Contains(NextChar)) != true)
+                    if (chararray.Length > searchString.Length)//Is there a next charicter check
                     {
-                        ListlettersResults.Add(NextChar);
+                        string NextChar = City.Substring(searchStringLength, 1);
+                        if ((ReturnObject.NextLetters.Contains(NextChar)) != true)//avoiding duplicates
+                        {
+                            ListlettersResults.Add(NextChar);
+                        }
                     }
                 }
                 ReturnObject.NextCities = ListcitiesResults;
