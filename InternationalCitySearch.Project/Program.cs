@@ -22,23 +22,21 @@ namespace InternationalCitySearch.Project
             string searchTearm = "";
             string continueQ = "Y";
 
-            while (continueQ.ToUpper()=="Y"|| continueQ.ToUpper() == "YES")
+            while (continueQ.ToUpper() == "Y" || continueQ.ToUpper() == "YES")
             {
                 Console.WriteLine("Please enter search term: ");
                 searchTearm = Console.ReadLine();
-
                 var returnobj = SearchClassObject.Search(searchTearm);
-
                 List<string> Cities = new List<string>(returnobj.NextCities);
                 List<string> Letters = new List<string>(returnobj.NextLetters);
 
-                Console.WriteLine("Matching cities: ");
+                Console.WriteLine("Found " + Cities.Count + " matching cities: ");
                 foreach (var City in Cities)
                 {
                     Console.WriteLine(City.ToString());
                 }
 
-                Console.WriteLine("Possible next characters: ");
+                Console.WriteLine("Found " + Letters.Count + " possible next characters: ");
                 foreach (var Letter in Letters)
                 {
                     Console.WriteLine(Letter.ToString());
@@ -46,7 +44,6 @@ namespace InternationalCitySearch.Project
                 Console.WriteLine("Continue searching? Yes or no ");
                 continueQ = Console.ReadLine();
             }
-
         }
     }
 }

@@ -13,12 +13,10 @@ namespace SearchClassLibrary
         public SearchClass(List<string> CitiesList_)
         {
             CitiesList = CitiesList_;
-            int count = 0;
 
             //Get longest string to work out max length of city name
             foreach (string s in CitiesList)
             {
-                count++;//can delete*******************
                 if (s.Length > longest.Length)
                 {
                     longest = s;
