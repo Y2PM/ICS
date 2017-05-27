@@ -24,14 +24,44 @@ namespace InternationalCitySearch.Project
             Console.ReadLine();
             */
 
+            //"C://Users//Joe//Source//Repos//ICS//Cities.txt"
+            //"H://axa project//InternationalCitySearch//Cities.txt"
 
-            string a = "abcd";
-            char[] b = new char[a.Length];
-            b = a.ToCharArray();
-            Console.WriteLine(b.Take(3).ToArray());
+            
+            GetCitiesClass GetCitiesObject = new GetCitiesClass();
+            List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//Cities.txt");
+            SearchClass SearchClassObject = new SearchClass(CitiesList);
+            var returnobj = SearchClassObject.Search("BanG");
+
+            List<string> Cities = new List<string>(returnobj.NextCities);
+            List<string> Letters = new List<string>(returnobj.NextLetters);
+
+            foreach (var City in Cities)
+            {
+                Console.WriteLine(City.ToString());
+            }
+            foreach (var Letter in Letters)
+            {
+                Console.WriteLine(Letter.ToString());
+            }
+            
             Console.ReadLine();
+            
 
-
+            /*
+            string a = "abcd";
+            char[] b = a.ToCharArray();
+            string c = new string(b);
+            if (a == c)
+            {
+                Console.WriteLine("Worked");
+            }
+            else
+            {
+                Console.WriteLine("Didn't work ," + a + " not equal to " + b.ToString());
+            }
+            Console.ReadLine();
+            */
         }
     }
 }
