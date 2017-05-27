@@ -12,6 +12,7 @@ namespace InternationalCitySearch.Project
             //"H://axa project//InternationalCitySearch//Cities.txt"
             //149893ChineseCityNames.txt
             //Cities.txt
+            //1.1million word list.txt
 
             GetCitiesClass GetCitiesObject = new GetCitiesClass();
             List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//149893ChineseCityNames.txt");
