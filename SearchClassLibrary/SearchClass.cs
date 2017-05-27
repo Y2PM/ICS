@@ -18,7 +18,7 @@ namespace SearchClassLibrary
             //Get longest string to work out max length of city name
             foreach (string s in CitiesList)
             {
-                count++;
+                count++;//can delete*******************
                 if (s.Length > longest.Length)
                 {
                     longest = s;
