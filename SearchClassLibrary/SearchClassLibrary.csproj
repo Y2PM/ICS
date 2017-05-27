@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GetCitiesClass.cs" />
+    <Compile Include="ICityFinder.cs" />
+    <Compile Include="ICityResult.cs" />
+    <Compile Include="ReturnClass.cs" />
     <Compile Include="SearchClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
