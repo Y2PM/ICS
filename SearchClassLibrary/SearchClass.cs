@@ -46,15 +46,15 @@ namespace SearchClassLibrary
                     if (chararray.Length > searchString.Length)//Is there a next charicter check
                     {
                         string NextChar = City.Substring(searchStringLength, 1);
-                        if ((ReturnObject.NextLetters.Contains(NextChar)) != true)//avoiding duplicates
+                        if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicates
                         {
                             ListlettersResults.Add(NextChar);
                         }
                     }
                 }
-                ReturnObject.NextCities = ListcitiesResults;
-                ReturnObject.NextLetters = ListlettersResults;
             }
+            ReturnObject.NextCities = ListcitiesResults;
+            ReturnObject.NextLetters = ListlettersResults;
             return ReturnObject;
         }
     }

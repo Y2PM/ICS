@@ -41,6 +41,15 @@ namespace InternationalCitySearch.Project
                 }
                 Console.WriteLine("Continue searching? Yes or no ");
                 continueQ = Console.ReadLine();
+                if (continueQ.ToUpper() != "Y" && continueQ.ToUpper() != "YES")
+                {
+                    Console.Write("Thankyou come again.");
+                    System.Threading.Thread.Sleep(1000);
+                    Console.Write(".");
+                    System.Threading.Thread.Sleep(1000);
+                    Console.Write(".");
+                    System.Threading.Thread.Sleep(1000);
+                }
             }
         }
     }
