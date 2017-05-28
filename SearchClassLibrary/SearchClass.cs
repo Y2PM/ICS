@@ -26,7 +26,7 @@ namespace SearchClassLibrary
             }
         }
 
-        public ICityResult Search(string searchString)//Search method, write the code in here.
+        public ICityResult Search(string searchString)
         {
             ReturnClass ReturnObject = new ReturnClass();
             searchStringLength = searchString.Length;
@@ -39,8 +39,8 @@ namespace SearchClassLibrary
             {
                 chararray = City.ToCharArray();
                 string arrayToStringToCommpare = new string(chararray.Take(searchStringLength).ToArray());
-                //           charicter match check                                     array length check
-                if ((arrayToStringToCommpare.ToUpper() == searchString.ToUpper() && (chararray.Length >= searchString.Length)))
+                //           charicter match check
+                if (arrayToStringToCommpare.ToUpper() == searchString.ToUpper())
                 {
                     ListcitiesResults.Add(City);
                     if (chararray.Length > searchString.Length)//Is there a next charicter check
