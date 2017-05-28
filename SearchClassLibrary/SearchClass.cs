@@ -40,13 +40,16 @@ namespace SearchClassLibrary
                 chararray = City.ToCharArray();
                 string arrayToStringToCommpare = new string(chararray.Take(searchStringLength).ToArray());
                 //           charicter match check
-                if (arrayToStringToCommpare.ToUpper() == searchString.ToUpper())
+                if (arrayToStringToCommpare == searchString)//Case sensitive
                 {
-                    ListcitiesResults.Add(City);
+                    if (ListcitiesResults.Contains(City) != true)//avoiding duplicate cities
+                    {
+                        ListcitiesResults.Add(City);
+                    }
                     if (chararray.Length > searchString.Length)//Is there a next charicter check
                     {
                         string NextChar = City.Substring(searchStringLength, 1);
-                        if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicates
+                        if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicate charicters, case sensitive
                         {
                             ListlettersResults.Add(NextChar);
                         }

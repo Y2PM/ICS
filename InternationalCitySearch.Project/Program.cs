@@ -22,7 +22,7 @@ namespace InternationalCitySearch.Project
 
             while (continueQ.ToUpper() == "Y" || continueQ.ToUpper() == "YES")
             {
-                Console.WriteLine("Please enter search term: ");
+                Console.WriteLine("Please enter search term (case sensitive): ");
                 searchTearm = Console.ReadLine();
                 var returnobj = SearchClassObject.Search(searchTearm);
                 List<string> Cities = new List<string>(returnobj.NextCities);
