@@ -12,10 +12,10 @@ namespace InternationalCitySearch.Project
             //"H://axa project//InternationalCitySearch//Cities.txt"
             //149893ChineseCityNames.txt
             //Cities.txt
-            //1.1million word list.txt
+            //1049939 Word list.txt
 
             GetCitiesClass GetCitiesObject = new GetCitiesClass();
-            List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//149893ChineseCityNames.txt");
+            List<string> CitiesList = GetCitiesObject.GetCitiesMethod("C://Users//Joe//Source//Repos//ICS//1049939 Word list.txt");
             SearchClass SearchClassObject = new SearchClass(CitiesList);
             string searchTearm = "";
             string continueQ = "Y";
@@ -28,7 +28,7 @@ namespace InternationalCitySearch.Project
                 List<string> Cities = new List<string>(returnobj.NextCities);
                 List<string> Letters = new List<string>(returnobj.NextLetters);
 
-                Console.WriteLine("Found " + Cities.Count + " matching cities: ");
+                Console.WriteLine("Found " + Cities.Count + " matching words: ");
                 foreach (var City in Cities)
                 {
                     Console.WriteLine(City.ToString());
