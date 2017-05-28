@@ -40,7 +40,7 @@ namespace SearchClassLibrary
                 chararray = City.ToCharArray();
                 string arrayToStringToCommpare = new string(chararray.Take(searchStringLength).ToArray());
                 //           charicter match check
-                if (arrayToStringToCommpare == searchString)//Case sensitive
+                if (arrayToStringToCommpare == searchString)//Case sensitive (use .ToUpper() here to remove case sensitivity)
                 {
                     if (ListcitiesResults.Contains(City) != true)//avoiding duplicate cities
                     {
@@ -48,7 +48,7 @@ namespace SearchClassLibrary
                     }
                     if (chararray.Length > searchString.Length)//Is there a next charicter check
                     {
-                        string NextChar = City.Substring(searchStringLength, 1);
+                        string NextChar = City.Substring(searchStringLength, 1);//(use.ToUpper() here to remove case sensitivity)
                         if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicate charicters, case sensitive
                         {
                             ListlettersResults.Add(NextChar);
