@@ -46,10 +46,10 @@ namespace SearchClassLibrary
                     {
                         ListcitiesResults.Add(City);
                     }
-                    if (chararray.Length > searchString.Length)//Is there a next charicter check
+                    if (chararray.Length > searchString.Length)//Is there a next character check
                     {
                         string NextChar = City.Substring(searchStringLength, 1);//(use .ToUpper() here to remove case sensitivity)
-                        if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicate charicters, case sensitive
+                        if ((ListlettersResults.Contains(NextChar)) != true)//avoiding duplicate characters, case sensitive
                         {
                             ListlettersResults.Add(NextChar);
                         }
