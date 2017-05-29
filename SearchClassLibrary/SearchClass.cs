@@ -9,7 +9,7 @@ namespace SearchClassLibrary
         List<string> CitiesList = new List<string>();
         int searchStringLength = 0;
         string longest = "";
-        int WordCount = 0;
+        //int WordCount = 0;
 
         public SearchClass(List<string> CitiesList_)
         {
@@ -18,7 +18,7 @@ namespace SearchClassLibrary
             //Get longest string to work out max length of city name
             foreach (string s in CitiesList)
             {
-                WordCount++;
+                //WordCount++;
                 if (s.Length > longest.Length)
                 {
                     longest = s;
