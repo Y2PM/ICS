@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 
 namespace SearchClassLibrary
@@ -11,7 +10,7 @@ namespace SearchClassLibrary
             StreamReader sr = new StreamReader(Path);
             List<string> CitiesList = new List<string>();
 
-            String line = "";
+            string line = "";
             while ((line = sr.ReadLine()) != null)
             {
                 CitiesList.Add(line);
