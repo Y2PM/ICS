@@ -125,7 +125,7 @@ namespace SpecCheckTests
                 CitiesList1M.Add(i.ToString());
             }
             List<string> CharactersListExpectedReturn = new List<string> { "-" };
-            SearchClass SearchClassObject = new SearchClass(CitiesList);
+            SearchClass SearchClassObject = new SearchClass(CitiesList1M);
 
             //Act
             var ReturnObject = SearchClassObject.Search("LL");
